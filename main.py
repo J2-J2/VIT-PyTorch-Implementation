@@ -6,7 +6,6 @@ from pathlib import Path
 from models import *
 import argparse
 from data import get_loader
-from models import VIT
 from utils import train_one_epoch, validate, get_metrics, save_model, print_epoch_result
 import json
 from datetime import datetime
