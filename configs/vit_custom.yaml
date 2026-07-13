@@ -1,0 +1,34 @@
+model:
+  name: vit_custom
+  n_class: 10
+
+data:
+  name: imagenette
+  train_dir: dataset/imagenette2/train
+  val_dir: dataset/imagenette2/val
+  image_size: 224
+  batch_size: 64
+  patch_size: 8
+  input_dim: 256
+  hidden_dim: 1024
+  n_heads: 4
+  n_layers: 4
+  drop_p: 0.1
+  num_workers: 0
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  inference_dir: dataset/imagenette2/val/
+
+train:
+  epochs: 10
+  lr: 3.0e-4
+  momentum: 0.9
+  weight_decay: 0.01
+  use_amp: true
+  
+scheduler:
+  name: multistep
+
+save:
+  checkpoint_dir: results
+  best_model_name: best_vit.pth

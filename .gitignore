@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+20260629_230432/
+notebooks/*
+!notebooks/train_model.ipynb
+result/
+
+*.pt
+*.pth
+*.ckpt
+*.h5
+data/
+datasets/
+runs/
+wandb/
+dataset/
